@@ -23,8 +23,8 @@ frutsClass.addEventListener('change', funFrurs);
 
 function range(){
     const rng = document.getElementById('range');
-    const p = document.getElementById('one');
-    p.innerHTML = rng.value;
+    const i1 = document.getElementById('i1');
+    i1.value = rng.value;
 }
 const rangeId = document.getElementById('range');
 rangeId.addEventListener('input', range);
