@@ -19,3 +19,12 @@ function funFrurs(){
 }
 const frutsClass = document.getElementById('mySelect');
 frutsClass.addEventListener('change', funFrurs);
+// =================================================
+
+function range(){
+    const rng = document.getElementById('range');
+    const p = document.getElementById('one');
+    p.innerHTML = rng.value;
+}
+const rangeId = document.getElementById('range');
+rangeId.addEventListener('input', range);
