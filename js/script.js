@@ -11,3 +11,11 @@ function whichCar(){
     } 
 buttonRadio.addEventListener("click", whichCar);
 // =================================================
+
+function funFrurs(){
+    const fruts = document.getElementById('mySelect').selectedIndex;
+    const options = document.getElementById('mySelect').options;
+    alert('You tried to eat it ' + options[fruts].text + '?');
+}
+const frutsClass = document.getElementById('mySelect');
+frutsClass.addEventListener('change', funFrurs);
