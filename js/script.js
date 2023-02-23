@@ -28,3 +28,36 @@ function range(){
 }
 const rangeId = document.getElementById('range');
 rangeId.addEventListener('input', range);
+// =================================================
+
+function rangeCss(){
+    const rtl = document.getElementById('rtl').value;
+    const rtr = document.getElementById('rtr').value;
+    const rbl = document.getElementById('rbl').value;
+    const rbr = document.getElementById('rbr').value;
+
+    const ttl = document.getElementById('ttl');
+    const ttr = document.getElementById('ttr');
+    const tbl = document.getElementById('tbl');
+    const tbr = document.getElementById('tbr');
+
+    const block = document.getElementById('block');
+
+    ttl.value = rtl;
+    ttr.value = rtr;
+    tbl.value = rbl;
+    tbr.value = rbr;
+
+    block.style.borderRadius = rtl + 'px ' + rtr + 'px ' + rbl + 'px ' + rbr + 'px ';
+}
+    const rtlAdd = document.getElementById('rtl');
+    rtlAdd.addEventListener('input', rangeCss);
+
+    const rtrAdd = document.getElementById('rtr');
+    rtrAdd.addEventListener('input', rangeCss);
+
+    const rblAdd = document.getElementById('rbl');
+    rblAdd.addEventListener('input', rangeCss);
+    
+    const rbrAdd = document.getElementById('rbr');
+    rbrAdd.addEventListener('input', rangeCss);
