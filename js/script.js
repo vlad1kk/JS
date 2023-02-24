@@ -58,6 +58,32 @@ function rangeCss(){
 
     const rblAdd = document.getElementById('rbl');
     rblAdd.addEventListener('input', rangeCss);
-    
+
     const rbrAdd = document.getElementById('rbr');
     rbrAdd.addEventListener('input', rangeCss);
+// =================================================
+
+document.getElementById('nav').onmouseover = function(event){
+    let target = event.target;
+    if(target.className == 'menu-item'){
+        const s = target.getElementByClassName('submenu');
+        closeMenu();
+        s[0].style.display = 'block';
+    }
+}
+
+document.onmouseover = function(event){
+    let target = event.target;
+    console.log(event.target);
+    if(target.className != 'menu-item' && target.className != 'submenu'){
+        closeMenu();
+    }
+}
+
+function closeMenu(){
+    const menu = document.getElementById('nav');
+    const subm = document.getElementsByClassName('submenu');
+    for(let i = 0; i < subm.length; i++){
+        subm[i].style.display = "none";
+    }
+}

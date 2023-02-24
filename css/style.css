@@ -8,3 +8,16 @@
     height: 100px;
     background-color: green;
 }
+.menu-item {
+    border: 2px solid purple;
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+}
+.menu-item .submenu {
+    height: 40px;
+    width: 120px;
+    background: green;
+    position: absolute;
+    cursor: pointer;
+}
