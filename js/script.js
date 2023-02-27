@@ -1,3 +1,4 @@
+// radio:
 const car = document.getElementsByName("car");
 const buttonRadio = document.getElementById("button_radio")
 function whichCar(){
@@ -12,6 +13,7 @@ function whichCar(){
 buttonRadio.addEventListener("click", whichCar);
 // =================================================
 
+// select:
 function funFrurs(){
     const fruts = document.getElementById('mySelect').selectedIndex;
     const options = document.getElementById('mySelect').options;
@@ -21,6 +23,7 @@ const frutsClass = document.getElementById('mySelect');
 frutsClass.addEventListener('change', funFrurs);
 // =================================================
 
+// range:
 function range(){
     const rng = document.getElementById('range');
     const i1 = document.getElementById('i1');
@@ -30,6 +33,7 @@ const rangeId = document.getElementById('range');
 rangeId.addEventListener('input', range);
 // =================================================
 
+// Range+css:
 function rangeCss(){
     const rtl = document.getElementById('rtl').value;
     const rtr = document.getElementById('rtr').value;
@@ -63,6 +67,7 @@ function rangeCss(){
     rbrAdd.addEventListener('input', rangeCss);
 // =================================================
 
+// Випадаюче меню:
 document.getElementById('nav').onmouseover = function(event){
     let target = event.target;
     if(target.className == 'menu-item'){
@@ -86,4 +91,15 @@ function closeMenu(){
     for(let i=0; i<subm.length; i++){
         subm[i].style.display = 'none';
     }
+}
+// =================================================
+
+// Tabs:
+const tab;
+const tabContent;
+
+window.onload = function(){
+    tab = document.getElementsByClassName('tab');
+    tabContent = document.getElementsByClassName('tabContent');
+    hideTabsContent(1);
 }
