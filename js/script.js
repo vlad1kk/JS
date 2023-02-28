@@ -110,7 +110,6 @@ function hideTabsContent(a){
         tab[i].classList.remove('whiteborder');
     }
 }
-
 document.getElementById('tabs').onclick = function(event){
     let target = event.target;
     if(target.className == 'tab'){
@@ -122,7 +121,6 @@ document.getElementById('tabs').onclick = function(event){
         }
     }
 }
-
 function showTabsContent(b){
     if(tabContent[b].classList.contains('hide')){
         hideTabsContent(0);
@@ -131,4 +129,6 @@ function showTabsContent(b){
         tabContent[b].classList.add('show');
     }
 }
- 
+// =================================================
+
+// Tabs:
