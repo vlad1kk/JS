@@ -131,4 +131,38 @@ function showTabsContent(b){
 }
 // =================================================
 
-// Tabs:
+// Modal window:
+let modal = document.getElementById('myModal');
+let btn = document.getElementById('myBtn');
+let span = document.getElementsByClassName('close')[0];
+
+btn.onclick = function(){
+    modal.style.display = 'block';
+}
+span.onclick = function(){
+    modal.style.display = 'none';
+}
+window.onclick = function(event){
+    let targer = event.target;
+    if(targer == modal){
+        modal.style.display = 'none';
+    }
+}
+// =================================================
+
+// Animation:
+function myMove(){
+    let elem = document.getElementById('myAnimation');
+    let pos = 0;
+    let id = setInterval(frame, 10);
+    function frame(){
+        if(pos == 300){
+            clearInterval(id);
+        } else {
+            pos ++;
+            elem.style.top = pos + 'px';
+            elem.style.left = pos + 'px';
+        }
+    }
+
+}
