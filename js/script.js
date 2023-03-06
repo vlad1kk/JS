@@ -183,7 +183,12 @@ function increment(){
     counter += 1;
 }
 function decrement(){
-    counter -= 1;
+    if(counter >= 1){
+        counter -= 1;
+    } else{
+        return
+    }
+    
 }
 function clear(){
     counter = 0;
