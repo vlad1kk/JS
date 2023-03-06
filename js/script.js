@@ -156,7 +156,7 @@ function myMove(){
     let pos = 0;
     let id = setInterval(frame, 10);
     function frame(){
-        if(pos == 300){
+        if(pos == 250){
             clearInterval(id);
         } else {
             pos ++;
@@ -166,3 +166,32 @@ function myMove(){
     }
 
 }
+// =============================================
+
+// Сounter:
+let nmb = document.querySelector('.couter-nmb');
+let inc = document.querySelector('.inc-btn');
+let clr = document.querySelector('.clr-btn');
+
+let counter = 0;
+
+function render(){
+    nmb.innerHTML = counter;
+}
+function increment(){
+    counter += 1;
+}
+function clear(){
+    counter = 0;
+}
+inc.addEventListener('click', () => {
+    increment()
+    render()
+})
+clr.addEventListener('click', () => {
+    clear()
+    render()
+})
+render()
+ 
+

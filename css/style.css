@@ -104,3 +104,29 @@
     position: absolute;
     background-color: red;
 }
+/* ============================================= */
+
+/* Сounter: */
+.counter {
+    width: 300px;
+    height: 150px;
+    border: 3px solid peru;
+    padding: 15px;
+}
+.couter-nmb {
+    margin-bottom: 30px;
+}
+.inc-btn {
+    width: 100px;
+    height: 50px;
+    background-color: #06ba30;
+    cursor:pointer;
+    margin-left: 25px;
+    margin-right: 25px;
+}
+.clr-btn {
+    width: 100px;
+    height: 50px;
+    background-color: #ea0404;
+    cursor:pointer;
+}
