@@ -171,6 +171,7 @@ function myMove(){
 // Сounter:
 let nmb = document.querySelector('.couter-nmb');
 let inc = document.querySelector('.inc-btn');
+let dec = document.querySelector('.dec-btn');
 let clr = document.querySelector('.clr-btn');
 
 let counter = 0;
@@ -181,11 +182,19 @@ function render(){
 function increment(){
     counter += 1;
 }
+function decrement(){
+    counter -= 1;
+}
 function clear(){
     counter = 0;
 }
+
 inc.addEventListener('click', () => {
     increment()
+    render()
+})
+dec.addEventListener('click', () => {
+    decrement()
     render()
 })
 clr.addEventListener('click', () => {
