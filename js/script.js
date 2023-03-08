@@ -208,19 +208,41 @@ clr.addEventListener('click', () => {
 // =============================================
 
 // Todo list:
-let todos =[];
-const objectTodos = {
-    text: '',
-    id: Math.random(),
-    bool: false
-}
-let block = document.querySelector('.todo-list');
-let text = document.querySelector('.inp-text');
-let btn = document.querySelector('.sub-btn');
+let divOutput = document.querySelector('.div-output');
+let todos = [];
 
-function addTodo(text) {
-    
+function addTodos(text){
+    const todo = {
+        id: `${Math.random()}`,
+        text,
+        done: false,
+    };
+    todos.push(todo);
 }
+function deleteTodos(id) {
+    todos.forEach(todo => {
+        if(todo.id == id){
+            todo.done = true;
+        }
+    })
+}
+function renderer(){
+    let html = ``;
+
+    todos.forEach(todo => {
+        if(todo.done){
+            return;
+        }
+        html += `
+        <div>${todo.text}</div>
+        `
+    });
+
+    divOutput.innerHTML = html;
+}
+addTodos('yfhgv');
+renderer();
+
 
 // =============================================
 

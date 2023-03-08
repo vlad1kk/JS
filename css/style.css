@@ -147,7 +147,28 @@
 /* ============================================= */
 
 /* Todo list: */
+.todo-list {
+    width: 400px;
+    height: 150px;
+    border: 3px solid rgb(15, 201, 218);
+    padding: 15px;
+}
+.inp-text {
+}
+.sub-btn {
 
+}
+.div-output {
+}
+.title-ul{
+    padding: 0;
+    display: flex;
+    list-style: none;
+}
+.title-ul li{
+    text-align: center;
+    width: 200px;
+}
 
 /* =============================================
 
