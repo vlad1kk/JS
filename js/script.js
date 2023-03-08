@@ -234,8 +234,14 @@ jsBtnYear.addEventListener('click', function(){
     if(answer === 2023){
         jsOutput.innerHTML = "Відповідь правильна!";
     } else if (answer === ''){
+        jsInputYear.style.border = '2px solid #ea0404';
+        jsInputYear.style.borderRadius = '3px';
         jsOutput.innerHTML = "В полі вводу нічого не вказано";
+
     } else {
         jsOutput.innerHTML = "Відповідь не правильна!";
     }
 })
+// =============================================
+
+// :
