@@ -133,10 +133,10 @@ function showTabsContent(b){
 
 // Modal window:
 let modal = document.getElementById('myModal');
-let btn = document.getElementById('myBtn');
+let mbtn = document.getElementById('myBtn');
 let span = document.getElementsByClassName('close')[0];
 
-btn.onclick = function(){
+mbtn.onclick = function(){
     modal.style.display = 'block';
 }
 span.onclick = function(){
@@ -186,14 +186,13 @@ function decrement(){
     if(counter >= 1){
         counter -= 1;
     } else{
-        return
-    }
-    
+        return;
+    } 
 }
 function clear(){
     counter = 0;
 }
-
+render()
 inc.addEventListener('click', () => {
     increment()
     render()
@@ -206,6 +205,37 @@ clr.addEventListener('click', () => {
     clear()
     render()
 })
-render()
- 
+// =============================================
 
+// Todo list:
+let todos =[];
+const objectTodos = {
+    text: '',
+    id: Math.random(),
+    bool: false
+}
+let block = document.querySelector('.todo-list');
+let text = document.querySelector('.inp-text');
+let btn = document.querySelector('.sub-btn');
+
+function addTodo(text) {
+    
+}
+
+// =============================================
+
+// Question:
+let jsInputYear = document.querySelector('.js-inpt-year');
+let jsBtnYear = document.querySelector('.js-btn-year');
+let jsOutput = document.querySelector('.js-output');
+
+jsBtnYear.addEventListener('click', function(){
+    let answer = jsInputYear.value;
+    if(answer === 2023){
+        jsOutput.innerHTML = "Відповідь правильна!";
+    } else if (answer === ''){
+        jsOutput.innerHTML = "В полі вводу нічого не вказано";
+    } else {
+        jsOutput.innerHTML = "Відповідь не правильна!";
+    }
+})
