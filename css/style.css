@@ -146,6 +146,20 @@
 }
 /* ============================================= */
 
+/* Question:  */
+.question {
+    width: 400px;
+    height: 150px;
+    border: 3px solid rgb(140, 218, 15);
+    padding: 15px;
+}
+.text {
+    font-weight: bold;
+    font-size: 21px;
+    padding-bottom: 5px;
+}
+/* =============================================
+
 /* Todo list: */
 .todo-list {
     width: 400px;
@@ -168,21 +182,6 @@
 .title-ul li{
     text-align: center;
     width: 200px;
-}
-
-/* =============================================
-
-Question: */
-.question {
-    width: 400px;
-    height: 150px;
-    border: 3px solid rgb(140, 218, 15);
-    padding: 15px;
-}
-.text {
-    font-weight: bold;
-    font-size: 21px;
-    padding-bottom: 5px;
 }
 /* =============================================
 

@@ -206,9 +206,36 @@ clr.addEventListener('click', () => {
     render()
 })
 // =============================================
+// Question:
+let jsInputYear = document.querySelector('.js-inpt-year');
+let jsBtnYear = document.querySelector('.js-btn-year');
+let jsOutput = document.querySelector('.js-output');
+
+jsBtnYear.addEventListener('click', function(){
+    let answer = jsInputYear.value;
+    if(answer == 2023){
+        jsInputYear.style.border = '2px solid green';
+        jsInputYear.style.borderRadius = '3px';
+        jsOutput.innerHTML = "Відповідь правильна!";
+    } else if (answer === ''){
+        jsInputYear.style.border = '2px solid #ea0404';
+        jsInputYear.style.borderRadius = '3px';
+        jsOutput.innerHTML = "В полі вводу нічого не вказано";
+
+    } else if(answer != 2023){
+        jsInputYear.style.border = '2px solid #ea0404';
+        jsInputYear.style.borderRadius = '3px';
+        jsOutput.innerHTML = "Відповідь не правильна!";
+    }
+})
+
+// =============================================
 
 // Todo list:
 let divOutput = document.querySelector('.div-output');
+let inpText = document.querySelector('.inp-text');
+let subBtn = document.querySelector('.sub-btn');
+
 let todos = [];
 
 function addTodos(text){
@@ -234,36 +261,34 @@ function renderer(){
             return;
         }
         html += `
-        <div>${todo.text}</div>
+        <div>
+        ${todo.text}
+        <button data-id='${todo.id}'>Done</button>
+        </div>
         `
     });
 
     divOutput.innerHTML = html;
 }
-addTodos('yfhgv');
-renderer();
 
+subBtn.addEventListener('click', () => {
+    const text = inpText.value;
 
-// =============================================
-
-// Question:
-let jsInputYear = document.querySelector('.js-inpt-year');
-let jsBtnYear = document.querySelector('.js-btn-year');
-let jsOutput = document.querySelector('.js-output');
-
-jsBtnYear.addEventListener('click', function(){
-    let answer = jsInputYear.value;
-    if(answer === 2023){
-        jsOutput.innerHTML = "Відповідь правильна!";
-    } else if (answer === ''){
-        jsInputYear.style.border = '2px solid #ea0404';
-        jsInputYear.style.borderRadius = '3px';
-        jsOutput.innerHTML = "В полі вводу нічого не вказано";
-
-    } else {
-        jsOutput.innerHTML = "Відповідь не правильна!";
-    }
+    addTodos(text);
+    renderer();
+    
 })
+divOutput.addEventListener('click', (event) => {
+    if(event.target.tagName !== 'BUTTON'){
+        return;
+    }
+    const id = event.target.dataset.id;
+
+    deleteTodos(id);
+    renderer();
+})
+
+
 // =============================================
 
 // :
