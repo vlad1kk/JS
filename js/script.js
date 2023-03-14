@@ -262,15 +262,13 @@ function renderer(){
         }
         html += `
         <div>
-        ${todo.text}
-        <button data-id='${todo.id}'>Done</button>
+        ${todo.text} <button data-id='${todo.id}'>Done</button>
         </div>
         `
     });
 
     divOutput.innerHTML = html;
 }
-
 subBtn.addEventListener('click', () => {
     const text = inpText.value;
 
@@ -287,8 +285,6 @@ divOutput.addEventListener('click', (event) => {
     deleteTodos(id);
     renderer();
 })
-
-
 // =============================================
 
 // :
